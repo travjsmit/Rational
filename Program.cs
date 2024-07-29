@@ -4,7 +4,7 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        // Step 4: Create a new Rational object and test WriteRational
+        // Create a new Rational object and test WriteRational
         Rational r = new Rational();
         r.WriteRational();
 
@@ -12,24 +12,23 @@ public class Program
         Rational r1 = new Rational(3, 4);
         r1.WriteRational();
 
-        // Step 7: Test Negate method
+        // Test Negate method
         r1.Negate();
         r1.WriteRational();
 
-        // Step 8: Test Invert method
+        // Test Invert method
         r1.Invert();
         r1.WriteRational();
 
-        // Step 9: Test ToDouble method
+        // Test ToDouble method
         Console.WriteLine(r1.ToDouble());
 
-        // Step 10: Test Reduce method
+        // Test Reduce method
         Rational r2 = new Rational(8, 12);
         r2.WriteRational();
 
-        // Step 11: Test Add method
-        Rational r3 = Rational.Add(r1, r2);
+        // Test Add method
+        Rational r3 = r1.Add(r2);
         r3.WriteRational();
     }
 }
-
