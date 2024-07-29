@@ -1,7 +1,5 @@
 ﻿using System;
 
-using System;
-
 public class Rational
 {
     private int numerator;
