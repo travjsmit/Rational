@@ -5,14 +5,14 @@ public class Rational
     private int numerator;
     private int denominator;
 
-    // Step 2: Default constructor
+    // Default constructor
     public Rational()
     {
         numerator = 0;
         denominator = 1;
     }
 
-    // Step 6: Parametric constructor
+    // Parametric constructor
     public Rational(int numerator, int denominator)
     {
         if (denominator == 0)
@@ -25,19 +25,19 @@ public class Rational
         Reduce();
     }
 
-    // Step 3: WriteRational method
+    // WriteRational method
     public void WriteRational()
     {
         Console.WriteLine($"{numerator}/{denominator}");
     }
 
-    // Step 7: Negate method
+    // Negate method
     public void Negate()
     {
         numerator = -numerator;
     }
 
-    // Step 8: Invert method
+    // Invert method
     public void Invert()
     {
         if (numerator == 0)
@@ -50,13 +50,13 @@ public class Rational
         denominator = temp;
     }
 
-    // Step 9: ToDouble method
+    // ToDouble method
     public double ToDouble()
     {
         return (double)numerator / denominator;
     }
 
-    // Step 10: Reduce method
+    // Reduce method
     public void Reduce()
     {
         int gcd = GCD(numerator, denominator);
@@ -76,11 +76,11 @@ public class Rational
         }
     }
 
-    // Step 11: Add method
-    public static Rational Add(Rational r1, Rational r2)
+    // Add method
+    public Rational Add(Rational other)
     {
-        int newNumerator = r1.numerator * r2.denominator + r2.numerator * r1.denominator;
-        int newDenominator = r1.denominator * r2.denominator;
+        int newNumerator = this.numerator * other.denominator + other.numerator * this.denominator;
+        int newDenominator = this.denominator * other.denominator;
         return new Rational(newNumerator, newDenominator);
     }
 }
